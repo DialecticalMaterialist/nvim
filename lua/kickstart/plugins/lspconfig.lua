@@ -212,11 +212,14 @@ return {
       lspconfig.glsl_analyzer.setup {
         capabilities = capabilities,
       }
+      lspconfig.clangd.setup {
+        capabilities = capabilities,
+      }
       lspconfig.zls.setup {
         capabilities = capabilities,
         settings = {
           zls = {
-            zig_lib_path = '/usr/lib/zig/',
+            zig_lib_path = '/usr/lib/zig',
           },
         },
       }

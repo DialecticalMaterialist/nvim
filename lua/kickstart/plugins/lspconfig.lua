@@ -210,9 +210,16 @@ return {
         },
       }
       lspconfig.glsl_analyzer.setup {
+        filetypes = { 'glsl', 'mesh', 'ms', 'vert', 'vs', 'tesc', 'tese', 'frag', 'fs', 'geom', 'comp' },
+        capabilities = capabilities,
+      }
+      lspconfig.slangd.setup {
         capabilities = capabilities,
       }
       lspconfig.clangd.setup {
+        capabilities = capabilities,
+      }
+      lspconfig.rust_analyzer.setup {
         capabilities = capabilities,
       }
       lspconfig.zls.setup {
@@ -223,7 +230,6 @@ return {
           },
         },
       }
-      -- vim.lsp.enable { 'lua_ls', 'glsl_analyzer', 'zls' }
     end,
   },
 }
